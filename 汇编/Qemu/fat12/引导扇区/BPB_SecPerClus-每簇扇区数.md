@@ -40,9 +40,9 @@
 
 - **用途：**
   - 计算逻辑簇号（Logical Cluster Number, LCN）对应的物理地址：
-    \[
-    \text{物理扇区号} = \text{起始扇区} + (\text{簇号} - 2) \times \text{BPB\_SecPerClus}
-    \]
+    
+    $\text{物理扇区号} = \text{起始扇区} + (\text{簇号} - 2) \times \text{BPB\_SecPerClus}$
+
   - 簇号从 2 开始编号，因为 0 和 1 簇是保留的（一般用于 FAT 表和根目录）。
 
 ---
@@ -60,18 +60,18 @@
 | BPB_FATSz           | 9 扇区      |
 
 - **每簇大小**:  
-  \[
-  \text{簇大小} = BPB\_BytsPerSec \times BPB\_SecPerClus = 512 \times 4 = 2048 \, \text{字节}
-  \]
+  
+  $\text{簇大小} = BPB\_BytsPerSec \times BPB\_SecPerClus = 512 \times 4 = 2048 \, \text{字节}$
+
 
 - **文件地址计算**:  
   如果文件在第 5 簇（LCN=5），其起始扇区号为：
-  \[
-  \text{起始扇区号} = \text{BPB\_RsvdSecCnt} + (\text{簇号} - 2) \times BPB\_SecPerClus
-  \]
-  \[
-  = 1 + (5 - 2) \times 4 = 13 \, \text{扇区号}
-  \]
+  
+  $\text{起始扇区号} = \text{BPB\_RsvdSecCnt} + (\text{簇号} - 2) \times BPB\_SecPerClus$
+
+
+  $= 1 + (5 - 2) \times 4 = 13 \, \text{扇区号}$
+
 
 ---
 
