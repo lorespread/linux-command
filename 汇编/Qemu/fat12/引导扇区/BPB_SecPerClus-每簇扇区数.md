@@ -61,17 +61,19 @@
 | BPB_FATSz           | 9 扇区      |
 
 - **每簇大小**:  
-  
-  $\text{簇大小} = BPB\_BytsPerSec \times BPB\_SecPerClus = 512 \times 4 = 2048 \, \text{字节}$
+
+```math
+  \text{簇大小} = BPB\_BytsPerSec \times BPB\_SecPerClus = 512 \times 4 = 2048 \, \text{字节}
+```math
 
 
 - **文件地址计算**:  
   如果文件在第 5 簇（LCN=5），其起始扇区号为：
-  
-  $\text{起始扇区号} = \text{BPB\_RsvdSecCnt} + (\text{簇号} - 2) \times BPB\_SecPerClus$
+  ```math
+  \text{起始扇区号} = \text{BPB\_RsvdSecCnt} + (\text{簇号} - 2) \times BPB\_SecPerClus
+  = 1 + (5 - 2) \times 4 = 13 \, \text{扇区号}$
+```math
 
-
-  $= 1 + (5 - 2) \times 4 = 13 \, \text{扇区号}$
 
 
 ---
