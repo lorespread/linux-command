@@ -64,7 +64,7 @@
 
 ```math
   \text{簇大小} = BPB\_BytsPerSec \times BPB\_SecPerClus = 512 \times 4 = 2048 \, \text{字节}
-```math
+```
 
 
 - **文件地址计算**:  
@@ -72,6 +72,9 @@
 
 ```math
   \text{起始扇区号} = \text{BPB\_RsvdSecCnt} + (\text{簇号} - 2) \times BPB\_SecPerClus
+```
+
+```math
   = 1 + (5 - 2) \times 4 = 13 \, \text{扇区号}
 ```
 
