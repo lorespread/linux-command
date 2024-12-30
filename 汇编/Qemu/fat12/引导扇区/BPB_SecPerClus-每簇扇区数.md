@@ -69,10 +69,10 @@
 
 - **文件地址计算**:  
   如果文件在第 5 簇（LCN=5），其起始扇区号为：
-  ```math
-  \text{起始扇区号} = \text{BPB\_RsvdSecCnt} + (\text{簇号} - 2) \times BPB\_SecPerClus
-  = 1 + (5 - 2) \times 4 = 13 \, \text{扇区号}$
 ```math
+  \text{起始扇区号} = \text{BPB\_RsvdSecCnt} + (\text{簇号} - 2) \times BPB\_SecPerClus
+  = 1 + (5 - 2) \times 4 = 13 \, \text{扇区号}
+```
 
 
 
