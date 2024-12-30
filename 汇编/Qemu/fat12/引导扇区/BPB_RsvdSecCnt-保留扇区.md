@@ -64,12 +64,14 @@
 - `BPB_FATSz = 9`
 
 如果文件起始在第 5 簇，则文件的物理扇区号可以计算为：
-\[
+
+```math
 \text{物理扇区号} = \text{BPB\_RsvdSecCnt} + (\text{FAT 表大小} \times \text{FAT 表数量}) + \text{根目录区域大小} + (\text{簇号} - 2)
-\]
-\[
+```
+
+```math
 = 1 + (9 \times 2) + 14 + (5 - 2) = 28 \, \text{扇区号}
-\]
+```
 
 ---
 
