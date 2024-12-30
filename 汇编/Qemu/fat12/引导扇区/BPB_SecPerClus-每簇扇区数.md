@@ -40,8 +40,9 @@
 
 - **用途：**
   - 计算逻辑簇号（Logical Cluster Number, LCN）对应的物理地址：
-    
-    $\text{物理扇区号} = \text{起始扇区} + (\text{簇号} - 2) \times \text{BPB\_SecPerClus}$
+    ```math
+    \text{物理扇区号} = \text{起始扇区} + (\text{簇号} - 2) \times \text{BPB\_SecPerClus}
+	```
 
   - 簇号从 2 开始编号，因为 0 和 1 簇是保留的（一般用于 FAT 表和根目录）。
 
